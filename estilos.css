@@ -1,0 +1,85 @@
+*{
+   background-color: black;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* titulos */
+select > option{
+   font-size: 11px;
+}
+.titleAmeroMatch{
+    text-align: center;
+}
+
+/* botones */
+
+.btnSubmit {
+    border: solid 3px white;
+    color: lightseagreen;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.btnWatch {
+    border: solid 3px lightseagreen;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.btnWatchPlayer{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    border: solid 3px lightseagreen;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+/* contenedores generales */
+.contenedorLoadPlayer, .contenedorLoadOrder{
+    text-align: center;
+}
+
+.contenedorLoadOrder{
+   padding-top: 20px;
+}
+
+/* Ver jugadores cargados */
+#divVer, #contenedorSolics{
+    margin-top: 20px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 4px lightseagreen;
+    font-size: 12px;
+}
+
+#divElementoVer{
+    margin-bottom: 10px;
+  
+}
+
+#divVer h2 {
+    background-color: lightgray;
+    color: black;
+    padding: 5px;
+    margin: 0;
+}
+
+#divVer h3, h4{
+    background-color: white;
+    margin: 0;
+    color: black;
+    padding: 5px;
+}
+
+.matchAnalysisTitle{
+    color: lightseagreen;
+}
+
+.matchAnalysisTitle2{
+    color: salmon;
+}
+

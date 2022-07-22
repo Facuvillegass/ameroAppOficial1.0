@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+ <!--    <form action="">
+    <input type="file" name="formImg" id="formImg">
+    <button type="submit">agregar img</button>
+    </form> -->
+
+    <!-- FORMULARIO DE AGREGADO DE JUGADORES  -->
+    <div class="titleAmeroMatch">
+    <h2>Welcome to Amero Match</h2>
+    </div>
+    <div class="contenedorLoadPlayer">
+    <h3>Load Player Order</h3>
+    <form action="" id="form">
+        <div class="contenedorNombre">
+            <label for="nombreJugador">Player Name</label>
+            <br>
+            <input type="text" name="nombreJugador" id="nombreJug">
+        </div>
+
+        <div class="contenedorEdad">
+            <label for="edadJugador">Age</label>
+            <br>
+            <select name="edadJugador" id="edadJug">
+              <option class = "option" value="ninguna">No option selected</option>
+              <option value="18-21">18-21</option>
+              <option value="22-25">22-25</option>
+              <option value="26-29">26-29</option>
+              <option value="30-33">30-33</option>
+              <option value="34-37">34-37</option>
+              <option value=">38">>38</option>
+            </select>
+          </div>
+
+          <div class = "contenedorPosicionPrincipal">
+            <label for="posicionPrincipalJugador">Main Position</label>
+            <br>
+            <select name="posicionPrincipalJugador" id="posicionPrincipalJug">
+              <option value="ninguna">No option selected</option>
+              <option value="GK">GK</option>
+              <option value="LB">LB</option>
+              <option value="LCB">LCB</option>
+              <option value="RCB">RCB</option>
+              <option value="RB">RB</option>
+              <option value="DM">DM</option>
+              <option value="LCMF">LCMF</option>
+              <option value="RCMF">RCMF</option>
+              <option value="AMF">AMF</option>
+              <option value="LAMF">LAMF</option>Jugador
+              <option value="RAMF">RAMF</option>
+              <option value="LW">LW</option>
+              <option value="CF">CF</option>
+              <option value="RW">RW</option> 
+            </select>
+          </div>
+        
+          <div class="contenedorPieHabil">
+            <label for="pieHabilJugador">Foot</label>
+            <br>
+            <select name="pieHabilJugador" id="pieHabilJug">
+              <option value="ninguna">No option selected</option>
+              <option value="LF">LF</option>  
+              <option value="RF">RF</option>Jugador
+              <option value="LRF">LRF</option>
+            </select>
+          </div>
+
+          
+          <div class="contenedorNacionalidad">
+            <label for="nacionalidadJugador">Nationality</label>
+            <br>
+            <select name="nacionalidadJugador" id="nacionalidadJug">
+              <option value="ninguna">No option selected</option>
+              <!-- base de datos general de todos los países -->
+            </select>
+          </div>
+
+          <div class = "contenedorPasaporte">
+            <label for="pasaporteJugador">Community Passport</label>
+            <br>
+            <select name="pasaporteJugador" id="pasaporteJug">
+              <option value="ninguna">No option selected</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          </div>
+
+          
+            <div class= "contenedorTipoDeTransferencia">
+                <label for="tipoDeTransferenciaJugador">Transfer Type</label>
+                <br>
+                <select name="tipoDeTransferenciaJugador" id="tipoDeTransferenciaJug">
+                <option value="ninguna">No option selected</option>
+                <option value="freeLoan">Free Loan</option>
+                <option value="loanFee+Option">Loan Free + Option</option>
+                <option value="transferFee">Transfer Fee</option>
+                </select>
+            </div>
+
+            <div class="contenedorValorDeTransferencia">
+                <label for="valorDeTransferenciaJugador">Transfer Value</label>
+                <br>
+                <select name="valorDeTransferenciaJugador" id="valorDeTransferenciaJug">
+                  <option value="ninguna">No option selected</option>
+                  <option value="free">Free</option>
+                  <option value="0-25K">0-25K</option>
+                  <option value="26-50K">26-50K</option>
+                  <option value="51-100K">51-100K</option>
+                  <option value="101-200K">101-200K</option>
+                  <option value="201-400K">201-400K</option>
+                  <option value="401-700K">401-700K</option>
+                  <option value="701K-1M">701K-1M</option>
+                  <option value="1,01M-2M">1,01M-2M</option>
+                  <option value="2,01M-4M">2,01M-4M</option>
+                  <option value="4,01M-7M">4,01M-7M</option>
+                  <option value="7,01M-10M">7,01M-10M</option>
+                  <option value=">10M">>10M</option>
+                </select>
+              </div>
+
+              <div class="contenedorSueldo">
+                <label for="sueldoJugador">Salary</label>
+                <br>
+                <select name="sueldoJugador" id="sueldoJug">
+                  <option value="ninguna">No option selected</option>
+                  <option value="0-5K">0-5K</option>
+                  <option value="6-10K">6-10K</option>
+                  <option value="11-15K">11-15K</option>
+                  <option value="16-20K">16-20K</option>
+                  <option value="21-30K">21-30K</option>
+                  <option value="31-50K">31-50K</option>
+                  <option value="51-75K">51-75K</option>
+                  <option value="76-100K">76-100K</option>
+                  <option value="101-150K">101-150K</option>
+                  <option value=">150K">>150K</option>
+                </select>
+              </div>
+
+              <div class="contenedorSituacionContractual">
+                <label for="situacionContractualJugador">Contract Situation</label>
+                <br>
+                <select name="situacionContractualJugador" id="situacionContractualJug">
+                  <option value="ninguna">No option selected</option>
+                  <option value="freePlayer">Free Player</option>
+                  <option value="contract">Contract</option>
+                </select>
+              </div>
+
+              <div class="contenedorClaseJugador">
+                <label for="claseJugador">Player Class</label>
+                <br>
+                <select name="claseJugador" id="claseJugadorJug">
+                  <option value="ninguna">No option selected</option>
+                  <option value="A">A</option>
+                  <option value="AA">AA</option>
+                  <option value="AAA">AAA</option>
+                </select>
+              </div>
+
+              <h2>More info</h2>
+              <div id="agentComentsJugadorContendor"><textarea name="agentCommentsJugador" id="agentCommentsJugador" cols="35" rows="6" placeholder="Agent Comments about this player"></textarea></div>
+
+              <div class="contenedorPrioridadJugador">
+                <label for="prioridadJugador">Order Priority</label>
+                <br>
+                <select name="prioridadJugador" id="prioridadJugador">
+                  <option value="ninguna">No option selected</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+              </div>
+
+              <div id="salaryTypeJugadorContenedor">
+                <label for="salaryTypeJugador">Salary Type</label>
+                <br>
+                <select name="salaryTypeJugador" id="salaryTypeJugador">
+                  <option value="ninguna">No option selected</option>
+                  <option value="Gross">Gross</option>
+                  <option value="Net">Net</option>
+                </select>
+              </div>
+
+              <div id="managerContractContenedor">
+               <label for="managerContract">Manager Contract</label>
+              <br>
+              <select name="managerContract" id="managerContract">
+                <option value="ninguna">No option selected</option>
+                <option value="Contract">Contract</option>
+                <option value="No Contract">No Contract</option>
+                <option value="Amero">Amero</option>
+                <option value="PartnerShip">PartnerShip</option>
+                <!-- agregar if -->
+              </select>
+            </div>
+            <br>
+              <button class = "btnSubmit" type="submit">Submit player</button>
+    </form>
+<!-- FIN FORMULARIO AGREGAR JUGADORES -->
+<!-- VER JUGADORES -->
+    <button type="button" id="btnVer" class = "btnWatch">Watch Player List</button>
+    <div id="divVer">
+  </div>
+
+ <!-- FIN VER JUGADORES -->
+
+ <div class="contenedorLoadOrder">
+ <h2>Load Team or Agent Order</h2>
+    <form action="" id="formSolic">
+
+        <div class="contenedorNombreSolic">
+            <label for="nombreSolic">Order From</label>
+            <br>
+            <input type="text" name="nombreSolic" id="nombreSolic">
+        </div>
+
+        <div class="contenedorEdadSolic">
+            <label for="edadSolic">Age</label>
+            <br>
+            <select name="edadSolic" id="edadSolic">
+              <option value="ninguna">No option selected</option>
+              <option value="18-21">18-21</option>
+              <option value="22-25">22-25</option>
+              <option value="26-29">26-29</option>
+              <option value="30-33">30-33</option>
+              <option value="34-37">34-37</option>
+              <option value=">38">>38</option>
+            </select>
+          </div>
+
+          <div class = "contenedorPosicionPrincipalSolic">
+            <label for="posicionPrincipalSolic">Main Position</label>
+            <br>
+            <select name="posicionPrincipalSolic" id="posicionPrincipalSolic">
+              <option value="ninguna">No option selected</option>
+              <option value="GK">GK</option>
+              <option value="LB">LB</option>
+              <option value="LCB">LCB</option>
+              <option value="RCB">RCB</option>
+              <option value="RB">RB</option>
+              <option value="DM">DM</option>
+              <option value="LCMF">LCMF</option>
+              <option value="RCMF">RCMF</option>
+              <option value="AMF">AMF</option>
+              <option value="LAMF">LAMF</option>
+              <option value="RAMF">RAMF</option>
+              <option value="LW">LW</option>
+              <option value="CF">CF</option>
+              <option value="RW">RW</option> 
+            </select>
+          </div>
+        
+          <div class="contenedorPieHabilSolic">
+            <label for="pieHabilSolic">Foot</label>
+            <br>
+            <select name="pieHabilSolic" id="pieHabilSolic">
+              <option value="ninguna">No option selected</option>
+              <option value="LF">LF</option>  
+              <option value="RF">RF</option>
+              <option value="LRF">LRF</option>
+            </select>
+          </div>
+
+          
+          <div class="contenedorNacionalidadSolic">
+            <label for="nacionalidadSolic">Nationality</label>
+            <br>
+            <select name="nacionalidadSolic" id="nacionalidadSolic">
+              <option value="ninguna">No option selected</option>
+              <!-- base de datos general de todos los países -->
+            </select>
+          </div>
+
+          <div class = "contenedorPasaporteSolic">
+            <label for="pasaporteSolic">Community Passport</label>
+            <br>
+            <select name="pasaporteSolic" id="pasaporteSolic">
+              <option value="ninguna">No option selected</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          </div>
+
+          
+            <div class= "contenedorTipoDeTransferenciaSolic">
+                <label for="tipoDeTransferenciaSolic">Transfer Type</label>
+                <br>
+                <select name="tipoDeTransferenciaSolic" id="tipoDeTransferenciaSolic">
+                <option value="ninguna">No option selected</option>
+                <option value="freeLoan">Free Loan</option>
+                <option value="loanFee+Option">Loan Free + Option</option>
+                <option value="transferFee">Transfer Fee</option>
+                </select>
+            </div>
+
+            <div class="contenedorValorDeTransferenciaSolic">
+                <label for="valorDeTransferenciaSolic">Transfer Value</label>
+                <br>
+                <select name="valorDeTransferenciaSolic" id="valorDeTransferenciaSolic">
+                  <option value="ninguna">No option selected</option>
+                  <option value="free">Free</option>
+                  <option value="0-25K">0-25K</option>
+                  <option value="26-50K">26-50K</option>
+                  <option value="51-100K">51-100K</option>
+                  <option value="101-200K">101-200K</option>
+                  <option value="201-400K">201-400K</option>
+                  <option value="401-700K">401-700K</option>
+                  <option value="701K-1M">701K-1M</option>
+                  <option value="1,01M-2M">1,01M-2M</option>
+                  <option value="2,01M-4M">2,01M-4M</option>
+                  <option value="4,01M-7M">4,01M-7M</option>
+                  <option value="7,01M-10M">7,01M-10M</option>
+                  <option value=">10M">>10M</option>
+                </select>
+              </div>
+
+              <div class="contenedorSueldoSolic">
+                <label for="sueldoSolic">Salary</label>
+                <br>
+                <select name="sueldoSolic" id="sueldoSolic">
+                  <option value="ninguna">No option selected</option>
+                  <option value="0-5K">0-5K</option>
+                  <option value="6-10K">6-10K</option>
+                  <option value="11-15K">11-15K</option>
+                  <option value="16-20K">16-20K</option>
+                  <option value="21-30K">21-30K</option>
+                  <option value="31-50K">31-50K</option>
+                  <option value="51-75K">51-75K</option>
+                  <option value="76-100K">76-100K</option>
+                  <option value="101-150K">101-150K</option>
+                  <option value=">150K">>150K</option>
+                </select>
+              </div>
+
+              <div class="contenedorSituacionContractualSolic">
+                <label for="situacionContractualSolic">Contract Situation</label>
+                <br>
+                <select name="situacionContractualSolic" id="situacionContractualSolic">
+                  <option value="ninguna">No option selected</option>
+                  <option value="freePlayer">Free Player</option>
+                  <option value="contract">Contract</option>
+                </select>
+              </div>
+
+              <div class="contenedorClaseJugadorSolic">
+                <label for="claseJugadorSolic">Player Class</label>
+                <br>
+                <select name="claseJugadorSolic" id="claseJugadorSolic">
+                  <option value="ninguna">No option selected</option>
+                  <option value="A">A</option>
+                  <option value="AA">AA</option>
+                  <option value="AAA">AAA</option>
+                </select>
+              </div>
+
+              <h2>More info</h2>
+
+              <div id="agentComentsSolic"><textarea name="agentComentsSolic" id="agentCommentsSolic" cols="35" rows="6" placeholder="Agent Comments about this order"></textarea></div>
+
+              <div class="contenedorPrioridadJSolic">
+                <label for="prioridadSolic">Order Priority</label>
+                <br>
+                <select name="prioridadSolic" id="prioridadSolic">
+                  <option value="ninguna">No option selected</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+              </div>
+
+              <div id="salaryTypeSolicContenedor">
+                <label for="salaryTypeSolic">Salary Type</label>
+                <br>
+                <select name="salaryTypeSolic" id="salaryTypeSolic">
+                  <option value="ninguna">No option selected</option>
+                  <option value="Gross">Gross</option>
+                  <option value="Net">Net</option>
+                </select>
+              </div>
+        
+        <button class = "btnSubmit" type="submit">Submit Order</button>
+    </form>
+
+    <button class = "btnWatch" type="button" id="btnVerSolicitudes">Watch Orders List</button>
+    <div id="contenedorSolics"></div>
+    <h2>MATCHES</h2>
+    <div id="divMatches"></div>
+
+
+ </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="codigo.js"></script>
+</body>
+
+</html>
